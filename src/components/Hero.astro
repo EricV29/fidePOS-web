@@ -1,0 +1,94 @@
+---
+import dashboardScreenshot from "../assets/dashboard.png";
+import FlagMXIcon from "../assets/icons/FlagMXIcon.astro";
+import FlagUSIcon from "../assets/icons/FlagUSIcon.astro";
+import LanIcon from "../assets/icons/LanIcon.astro";
+---
+
+<header class="relative pt-10 pb-16 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col lg:flex-row items-center gap-16">
+      <div class="flex-1 text-center lg:text-left">
+        <div
+          class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-8"
+        >
+          <div class="flex -space-x-2">
+            <div
+              class="w-8 h-8 rounded-full border-3 border-[#F57C00] shadow-sm overflow-hidden flex items-center justify-center bg-slate-100 group"
+            >
+              <FlagMXIcon className="w-full h-full object-cover" />
+            </div>
+            <div
+              class="w-8 h-8 rounded-full border-3 border-[#F57C00] shadow-sm overflow-hidden flex items-center justify-center bg-slate-100"
+            >
+              <FlagUSIcon className="w-full h-full object-cover" />
+            </div>
+          </div>
+
+          <div class="text-slate-600 text-sm">
+            <div
+              class="flex items-center justify-center lg:justify-start gap-2 font-medium text-[#F57C00] mb-0.5"
+            >
+              <LanIcon className="w-5 h-5" />
+              Software Bilingüe
+            </div>
+            <span class="text-slate-500"
+              >Disponible en <strong class="text-[#43A047]"
+                >Español e Inglés</strong
+              ></span
+            >
+          </div>
+        </div>
+
+        <h1
+          class="text-5xl md:text-6xl font-extrabold tracking-tight text-slate-950 mb-6 leading-tight"
+        >
+          Controla tu negocio con <span class="text-[#F57C00]">FidePOS</span>.
+          Simple y Seguro.
+        </h1>
+
+        <p class="text-xl text-slate-600 mb-12 max-w-2xl mx-auto lg:mx-0">
+          Gestiona ventas, inventarios y clientes con una herramienta diseñada
+          para PyMES. Tus datos se quedan contigo. Sin cuotas mensuales.
+        </p>
+
+        <div
+          class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+        >
+          <a
+            href="https://github.com/EricV29/fidePOS/releases/download/v1.0.0/FidePOS.Setup.1.0.0.exe"
+            class="bg-[#F57C00] hover:bg-[#ff9123] text-white font-bold py-4 px-10 rounded-2xl text-lg transition-all hover:shadow-xl hover:scale-105"
+          >
+            Descargar v1.0.0
+          </a>
+          <a
+            href="#features"
+            class="text-slate-700 font-semibold py-4 px-10 rounded-2xl text-lg hover:bg-[#ff9123]/20 transition-colors"
+          >
+            Ver características →
+          </a>
+        </div>
+      </div>
+
+      <div class="flex-1 w-full max-w-4xl lg:max-w-none">
+        <div
+          class="relative bg-white p-2 sm:p-3 rounded-2xl shadow-2xl border border-[#F57C00] lg:-mr-48"
+        >
+          <div
+            class="flex gap-1.5 pb-2 sm:pb-3 border-b border-[#F57C00] mb-2 sm:mb-3"
+          >
+            <div class="w-3 h-3 rounded-full bg-red-400"></div>
+            <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+            <div class="w-3 h-3 rounded-full bg-green-400"></div>
+          </div>
+
+          <img
+            src={dashboardScreenshot.src}
+            alt="Dashboard principal de FidePOS"
+            class="rounded-xl w-full h-auto"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

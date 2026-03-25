@@ -1,0 +1,155 @@
+---
+import GmailIcon from "../assets/icons/GmailIcon.astro";
+import KeyIcon from "../assets/icons/KeyIcon.astro";
+import CheckIcon from "../assets/icons/CheckIcon.astro";
+import DbIcon from "../assets/icons/DbIcon.astro";
+import logoFidePOS from "../assets/logoFidePOS.svg";
+import FidePOSIcon from "../assets/icons/FidePOSIcon.astro";
+---
+
+<section id="start" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-extrabold text-[#F57C00] mb-4">
+        De la instalación al impacto
+      </h2>
+      <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+        Comienza a optimizar tu negocio en tres pasos sencillos, diseñados para
+        la claridad y la eficiencia.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- PASO 1: DESCARGA -->
+      <div class="flex flex-col">
+        <div
+          class="h-80 bg-[#F57C00]/10 rounded-3xl border border-slate-100 mb-6 flex items-center justify-center p-8 overflow-hidden group"
+        >
+          <div
+            class="bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-4 transition-transform group-hover:scale-105"
+          >
+            <div class="flex -space-x-3">
+              <div
+                class="w-10 h-10 rounded-full bg-blue-500 border-2 border-white flex items-center justify-center text-white text-xs font-bold"
+              >
+                JD
+              </div>
+              <div
+                class="w-10 h-10 rounded-full bg-orange-500 border-2 border-white flex items-center justify-center text-white text-xs font-bold"
+              >
+                AM
+              </div>
+              <div
+                class="w-10 h-10 rounded-full bg-slate-800 border-2 border-white flex items-center justify-center text-white text-xs font-bold"
+              >
+                +
+              </div>
+            </div>
+            <div class="text-left">
+              <div class="flex text-yellow-400 text-xs mb-1">★★★★★</div>
+              <p class="text-[10px] text-slate-500 font-medium italic">
+                "Completamente GRATIS"
+              </p>
+            </div>
+          </div>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900 mb-2">
+          1. Descarga e Instala
+        </h3>
+        <p class="text-slate-600 leading-relaxed">
+          Obtén el instalador ligero de FidePOS y configura tu entorno local en
+          menos de 5 minutos.
+        </p>
+      </div>
+
+      <!-- PASO 2: CONFIGURACIÓN (Gráfico) -->
+      <div class="flex flex-col">
+        <div
+          class="h-80 bg-[#F57C00]/10 rounded-3xl border border-slate-100 mb-6 flex items-center justify-center p-8 overflow-hidden group"
+        >
+          <div
+            class="h-80 rounded-3xl border border-slate-100 mb-6 flex items-center justify-center p-8 overflow-hidden group"
+          >
+            <div
+              class="relative transition-transform duration-500 group-hover:scale-110"
+            >
+              <div
+                class="w-24 h-28 bg-white border-2 border-slate-200 rounded-4xl shadow-sm flex flex-col items-center justify-center relative overflow-hidden"
+              >
+                <div
+                  class="w-full h-8 border-b-2 border-slate-100 bg-slate-50/50 mb-auto"
+                >
+                </div>
+                <div class="w-12 h-1.5 bg-slate-100 rounded-full mb-2"></div>
+                <div class="w-8 h-1.5 bg-slate-100 rounded-full mb-8"></div>
+              </div>
+
+              <div
+                class="absolute -bottom-2 -right-4 bg-[#43A047] p-3 rounded-2xl shadow-xl border-4 border-white text-white rotate-12 group-hover:rotate-0 transition-transform"
+              >
+                <KeyIcon class="w-6 h-6" />
+              </div>
+
+              <div
+                class="absolute -top-4 -left-6 bg-[#F57C00] p-2.5 rounded-xl shadow-lg border-4 border-white text-white -rotate-12 group-hover:rotate-0 transition-transform delay-75"
+              >
+                <GmailIcon class="w-5 h-5" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900 mb-2">
+          2. Comienza de cero
+        </h3>
+        <p class="text-slate-600 leading-relaxed">
+          Crea tu nueva base de datos con o sin las credenciales para correos
+          electrónicos (facil de configurar).
+        </p>
+      </div>
+
+      <!-- PASO 3: ÉXITO (Feedback) -->
+      <div class="flex flex-col">
+        <div
+          class="h-80 bg-[#F57C00]/10 rounded-3xl border border-slate-100 mb-6 flex items-center justify-center p-8 overflow-hidden group"
+        >
+          <div class="relative flex items-center justify-center">
+            <div
+              class="w-32 h-24 bg-white border-2 border-slate-200 rounded-2xl shadow-sm relative z-10 flex items-center justify-center"
+            >
+              <div
+                class="absolute -top-3 left-4 w-12 h-6 bg-slate-100 border-2 border-slate-200 rounded-t-lg -z-10"
+              >
+              </div>
+
+              <FidePOSIcon class="w-auto h-10" />
+            </div>
+
+            <div
+              class="absolute -top-12 -right-8 bg-white p-4 rounded-xl shadow-2xl border border-slate-100 transform -rotate-12 group-hover:-translate-x-12 group-hover:translate-y-12 group-hover:rotate-0 transition-all duration-700 ease-out"
+            >
+              <div class="flex flex-col items-center gap-1">
+                <DbIcon class="w-8 h-8 text-[#F57C00]" />
+                <span class="text-[10px] font-bold text-slate-400"
+                  >fidepos.db</span
+                >
+              </div>
+            </div>
+
+            <div
+              class="absolute -left-12 bottom-0 bg-[#43A047] p-2 rounded-full text-white shadow-lg opacity-0 group-hover:opacity-100 group-hover:translate-x-4 transition-all duration-500 delay-300"
+            >
+              <CheckIcon class="w-4 h-4" />
+            </div>
+          </div>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900 mb-2">
+          3. Utiliza tu archivo anterior
+        </h3>
+        <p class="text-slate-600 leading-relaxed">
+          Agrega tu archivo de base de datos anterior junto con tus
+          credenciales.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

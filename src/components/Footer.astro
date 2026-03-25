@@ -1,0 +1,141 @@
+---
+import GitHubIcon from "../assets/icons/GitHubIcon.astro";
+import InstagramIcon from "../assets/icons/InstagramIcon.astro";
+import GmailIcon from "../assets/icons/GmailIcon.astro";
+import LinkedInIcon from "../assets/icons/LinkedInIcon.astro";
+import FidePOSIcon from "../assets/icons/FidePOSIcon.astro";
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-white pt-20 pb-10 border-t border-slate-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- PARTE SUPERIOR -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+      <!-- Logo y Descripción -->
+      <div class="md:col-span-6 lg:col-span-5">
+        <div class="flex items-center gap-2 mb-6">
+          <FidePOSIcon class="h-10 w-auto" />
+        </div>
+        <p class="text-slate-500 text-lg leading-relaxed max-w-sm mb-8">
+          Gestiona tu inventario, ventas y clientes con una herramienta diseñada
+          para la simplicidad y la velocidad. Sin nubes, tus datos están seguros
+          en tu PC.
+        </p>
+
+        <!-- Redes Sociales (Estilo Slidex) -->
+        <div class="flex gap-5">
+          <a
+            href="mailto:typira.oficial@gmail.com"
+            aria-label="Enviar un correo electrónico a soporte"
+            class="text-slate-400 hover:text-[#F57C00] transition-colors"
+          >
+            <GmailIcon class="w-6 h-6" />
+          </a>
+          <a
+            href="https://instagram.com/jared29x"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visitar nuestro perfil de Instagram"
+            class="text-slate-400 hover:text-[#F57C00] transition-colors"
+          >
+            <InstagramIcon class="w-6 h-6" />
+          </a>
+          <a
+            href="https://github.com/EricV29"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Ver perfil de desarrollador en GitHub"
+            class="text-slate-400 hover:text-[#F57C00] transition-colors"
+          >
+            <GitHubIcon class="w-6 h-6" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/eric-villeda-reyes-584856281/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Conectar en LinkedIn"
+            class="text-slate-400 hover:text-[#F57C00] transition-colors"
+          >
+            <LinkedInIcon class="w-6 h-6" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Espacio vacío (Como en Slidex) -->
+      <div class="hidden lg:block lg:col-span-2"></div>
+
+      <!-- Navegación "Compañía" -->
+      <div class="md:col-span-3 lg:col-span-2">
+        <h3
+          class="text-sm font-bold text-slate-900 uppercase tracking-widest mb-6"
+        >
+          Compañía
+        </h3>
+        <ul class="space-y-4">
+          <li>
+            <a
+              href="#features"
+              class="text-slate-500 hover:text-slate-900 transition-colors"
+              >Características</a
+            >
+          </li>
+          <li>
+            <a
+              href="#screenshots"
+              class="text-slate-500 hover:text-slate-900 transition-colors"
+              >Galería</a
+            >
+          </li>
+          <li>
+            <a
+              href="#technologies"
+              class="text-slate-500 hover:text-slate-900 transition-colors"
+              >Tecnología</a
+            >
+          </li>
+          <li>
+            <a
+              href="#faq"
+              class="text-slate-500 hover:text-slate-900 transition-colors"
+              >FAQ's</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <!-- Navegación "Producto" -->
+      <div class="md:col-span-3 lg:col-span-3">
+        <h3
+          class="text-sm font-bold text-slate-900 uppercase tracking-widest mb-6"
+        >
+          Desarrollo
+        </h3>
+        <ul class="space-y-4">
+          <li>
+            <a
+              href="https://github.com/EricV29/fidePOS.git"
+              target="_blank"
+              class="text-slate-500 hover:text-slate-900 transition-colors"
+              >Repositorio GitHub</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PARTE INFERIOR (COPYRIGHT) -->
+    <div
+      class="pt-10 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6"
+    >
+      <p class="text-slate-400 text-sm font-medium">
+        {currentYear} © FidePOS.
+      </p>
+      <div class="flex items-center gap-1 text-slate-400 text-sm">
+        <span>Hecho con</span>
+        <span class="text-red-500 animate-pulse">❤️</span>
+        <span>para PyMES locales.</span>
+      </div>
+    </div>
+  </div>
+</footer>

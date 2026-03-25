@@ -1,0 +1,135 @@
+---
+import ReactIcon from "../assets/icons/ReactIcon.astro";
+import TypeScriptIcon from "../assets/icons/TypeScriptIcon.astro";
+import ViteIcon from "../assets/icons/ViteIcon.astro";
+import ElectronIcon from "../assets/icons/ElectronIcon.astro";
+import TailwindIcon from "../assets/icons/TailwindIcon.astro";
+import SqliteIcon from "../assets/icons/SqliteIcon.astro";
+import JavaScriptIcon from "../assets/icons/JavaScriptIcon.astro";
+import GitHubIcon from "../assets/icons/GitHubIcon.astro";
+import AstroIcon from "../assets/icons/AstroIcon.astro";
+import VSCodeIcon from "../assets/icons/VSCodeIcon.astro";
+import GmailIcon from "../assets/icons/GmailIcon.astro";
+import NodemailerIcon from "../assets/icons/NodemailerIcon.astro";
+import ShadcnIcon from "../assets/icons/ShadcnIcon.astro";
+import NodejsIcon from "../assets/icons/NodejsIcon.astro";
+import I18nextIcon from "../assets/icons/I18nextIcon.astro";
+import GraphIcon from "../assets/icons/GraphIcon.astro";
+
+const row1 = [
+  { name: "React", Icon: ReactIcon },
+  { name: "TypeScript", Icon: TypeScriptIcon },
+  { name: "JavaScript", Icon: JavaScriptIcon },
+  { name: "Vite", Icon: ViteIcon },
+  { name: "Electron", Icon: ElectronIcon },
+  { name: "Tailwind", Icon: TailwindIcon },
+  { name: "Sqlite", Icon: SqliteIcon },
+  { name: "NodeJs", Icon: NodejsIcon },
+];
+
+const row2 = [
+  { name: "GitHub", Icon: GitHubIcon },
+  { name: "Astro", Icon: AstroIcon },
+  { name: "VS Code", Icon: VSCodeIcon },
+  { name: "Gmail", Icon: GmailIcon },
+  { name: "Nodemailer", Icon: NodemailerIcon },
+  { name: "Shadcn", Icon: ShadcnIcon },
+  { name: "Recharts", Icon: GraphIcon },
+  { name: "i18next", Icon: I18nextIcon },
+];
+---
+
+<section id="technologies" class="py-24 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <h2
+        class="text-4xl font-extrabold text-[#F57C00] mb-4 tracking-tight text-balance"
+      >
+        Creado con tecnología moderna y segura
+      </h2>
+      <p class="text-lg text-slate-600 max-w-2xl mx-auto mb-8">
+        FidePOS está construido sobre bases sólidas para garantizar la
+        fiabilidad que tu negocio necesita.
+      </p>
+
+      <a
+        href="https://github.com/EricV29/fidePOS.git"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2.5 px-6 py-3 bg-white text-black rounded-full text-sm font-semibold shadow-lg hover:bg-black/20 transition-all hover:-translate-y-0.5"
+      >
+        <div class="w-5 h-5 flex items-center justify-center">
+          <GitHubIcon />
+        </div>
+        Ver Código en GitHub →
+      </a>
+    </div>
+
+    <div class="space-y-6">
+      <!-- Fila 1 -->
+      <div class="flex marquee-container marquee-reverse gap-6">
+        {
+          [...row1, ...row1].map(({ Icon, name }) => (
+            <div class="shrink-0 flex items-center gap-3 px-6 py-4 bg-white rounded-2xl border border-slate-100 shadow-sm w-55 group">
+              <div class="w-8 h-8 flex items-center justify-center">
+                <Icon />
+              </div>
+              <span class="font-semibold text-slate-700">{name}</span>
+            </div>
+          ))
+        }
+      </div>
+
+      <div class="flex marquee-container gap-6">
+        {
+          [...row2, ...row2].map(({ Icon, name }) => (
+            <div class="shrink-0 flex items-center gap-3 px-6 py-4 bg-white rounded-2xl border border-slate-100 shadow-sm w-55 group">
+              <div class="w-8 h-8 flex items-center justify-center">
+                <Icon />
+              </div>
+              <span class="font-semibold text-slate-700">{name}</span>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Configuración del contenedor principal del carrusel */
+  .marquee-container {
+    width: max-content; /* Permite que el flex crezca todo lo necesario */
+    animation: marquee 30s linear infinite; /* Animación predeterminada */
+  }
+
+  /* Animación hacia la izquierda */
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-100% / 2));
+    } /* Se mueve la mitad de su longitud total duplicada */
+  }
+
+  /* Configuración de la segunda fila con dirección inversa */
+  .marquee-reverse {
+    animation: marquee-reverse 30s linear infinite;
+  }
+
+  /* Animación hacia la derecha */
+  @keyframes marquee-reverse {
+    0% {
+      transform: translateX(calc(-100% / 2));
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  /* Pausar la animación al pasar el ratón */
+  .marquee-container:hover {
+    animation-play-state: paused;
+  }
+</style>

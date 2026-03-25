@@ -1,0 +1,175 @@
+---
+import dashboard from "../assets/dashboard.png";
+import nevaVenta from "../assets/nuevaVenta.png";
+import inventario from "../assets/inventario.png";
+import historial from "../assets/historial.png";
+import clientesGeneral from "../assets/clientesGeneral.png";
+import cleintesPagos from "../assets/clientesPagos.png";
+import reportes from "../assets/reportes.png";
+import configuracion from "../assets/configuracion.png";
+
+const screenshots = [
+  {
+    id: 1,
+    name: "Dashboard",
+    desc: "Visualización de métricas de ventas diarias, ganancias y estado general del negocio mediante gráficas interactivas.",
+    img: dashboard.src,
+  },
+  {
+    id: 2,
+    name: "Ventas",
+    desc: "Interfaz ágil para registrar nuevas ventas, aplicar descuentos y procesar diferentes métodos de pago.",
+    img: nevaVenta.src,
+  },
+  {
+    id: 3,
+    name: "Inventario",
+    desc: "Control total de stock, categorías y precios.",
+    img: inventario.src,
+  },
+  {
+    id: 4,
+    name: "Historial",
+    desc: "Registro cronológico detallado de todas las transacciones realizadas.",
+    img: historial.src,
+  },
+  {
+    id: 5,
+    name: "Clientes",
+    desc: "Directorio centralizado para gestionar la información de contacto y perfiles de compradores frecuentes.",
+    img: clientesGeneral.src,
+  },
+  {
+    id: 6,
+    name: "Pagos",
+    desc: "Seguimiento especializado de créditos, saldos pendientes y registro histórico de abonos de clientes.",
+    img: cleintesPagos.src,
+  },
+  {
+    id: 7,
+    name: "Reportes",
+    desc: "Interfaz Herramienta para exportar métricas de rendimiento y cierres de caja en formatos profesionales como PDF y Excel.",
+    img: reportes.src,
+  },
+  {
+    id: 8,
+    name: "Ajustes",
+    desc: "Personalización del sistema, gestión de usuarios y gestion de categorías.",
+    img: configuracion.src,
+  },
+];
+---
+
+<section
+  id="screenshots"
+  class="relative py-24 bg-white overflow-hidden border-t border-slate-100"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col lg:flex-row-reverse items-start gap-16">
+      <!-- TEXTO Y SELECTORES A LA DERECHA -->
+      <div class="flex-1 z-10 w-full">
+        <h2
+          class="text-4xl font-extrabold text-slate-900 mb-6 tracking-tight text-center lg:text-left"
+        >
+          Una interfaz pensada para la <span class="text-[#F57C00]"
+            >productividad</span
+          >
+        </h2>
+
+        <!-- Área de Texto Dinámico -->
+        <div class="mb-10 text-center lg:text-left min-h-25">
+          <h3
+            id="screenshot-name"
+            class="text-xl font-bold text-[#F57C00] transition-all duration-300"
+          >
+            {screenshots[0].name}
+          </h3>
+          <p
+            id="screenshot-desc"
+            class="text-slate-600 mt-2 leading-relaxed transition-all duration-300"
+          >
+            {screenshots[0].desc}
+          </p>
+        </div>
+
+        <!-- Grid de mini selectores (Más pequeños y con nombre) -->
+        <div class="grid grid-cols-2 gap-2" id="screenshot-grid">
+          {
+            screenshots.map((shot) => (
+              <button
+                class="flex items-center gap-3 p-3 bg-[#F57C00]/10 rounded-xl border border-slate-200 hover:border-[#F57C00] hover:bg-white transition-all cursor-pointer group text-left"
+                data-img={shot.img}
+                data-name={shot.name}
+                data-desc={shot.desc}
+              >
+                <span class="shrink-0 w-6 h-6 rounded-md bg-white border border-slate-200 flex items-center justify-center text-[10px] font-bold text-slate-400 group-hover:text-[#F57C00] group-hover:border-[#F57C00] transition-colors">
+                  {shot.id}
+                </span>
+                <span class="text-sm font-semibold text-slate-600 group-hover:text-slate-900 transition-colors">
+                  {shot.name}
+                </span>
+              </button>
+            ))
+          }
+        </div>
+      </div>
+
+      <!-- VISTA PREVIA A LA IZQUIERDA -->
+      <div class="flex-1 w-full max-w-4xl lg:max-w-none sticky top-24">
+        <div
+          class="relative bg-white p-2 sm:p-3 rounded-2xl shadow-2xl border border-[#F57C00] lg:-ml-12"
+        >
+          <div
+            class="flex gap-1.5 pb-2 sm:pb-3 border-b border-[#F57C00] mb-2 sm:mb-3"
+          >
+            <div class="w-2.5 h-2.5 rounded-full bg-red-400"></div>
+            <div class="w-2.5 h-2.5 rounded-full bg-yellow-400"></div>
+            <div class="w-2.5 h-2.5 rounded-full bg-green-400"></div>
+          </div>
+
+          <img
+            id="main-screenshot"
+            src={screenshots[0].img}
+            alt="FidePOS Software"
+            class="rounded-xl w-full h-auto shadow-inner transition-opacity duration-300"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const mainImg = document.getElementById(
+    "main-screenshot",
+  ) as HTMLImageElement;
+  const nameLabel = document.getElementById("screenshot-name");
+  const descLabel = document.getElementById("screenshot-desc");
+  const buttons = document.querySelectorAll("#screenshot-grid button");
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("mouseenter", () => {
+      const img = btn.getAttribute("data-img");
+      const name = btn.getAttribute("data-name");
+      const desc = btn.getAttribute("data-desc");
+
+      if (mainImg && nameLabel && descLabel && img && name && desc) {
+        // Animación de salida
+        [mainImg, nameLabel, descLabel].forEach(
+          (el) => (el.style.opacity = "0.3"),
+        );
+
+        setTimeout(() => {
+          mainImg.src = img;
+          nameLabel.textContent = name;
+          descLabel.textContent = desc;
+
+          // Animación de entrada
+          [mainImg, nameLabel, descLabel].forEach(
+            (el) => (el.style.opacity = "1"),
+          );
+        }, 150);
+      }
+    });
+  });
+</script>

@@ -1,0 +1,137 @@
+---
+import StartIcon from "../assets/icons/StarIcon.astro";
+import CheckIcon from "../assets/icons/CheckIcon.astro";
+import PcIcon from "../assets/icons/PcIcon.astro";
+---
+
+<section id="features" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-20">
+      <h2 class="text-4xl font-extrabold text-[#F57C00] mb-4">
+        Todo lo que necesitas
+      </h2>
+      <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+        Diseñado para ser rápido, seguro y fácil de usar desde el primer día.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+      <!-- TARJETA 1: CARACTERISTICAS -->
+      <div
+        class="relative p-8 bg-[#F57C00]/5 rounded-3xl border-2 border-[#F57C00] shadow-sm"
+      >
+        <div
+          class="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-[#F57C00] rounded-full flex items-center justify-center shadow-lg"
+        >
+          <StartIcon class="w-6 h-6 text-white" />
+        </div>
+
+        <h3 class="text-2xl font-bold text-center mt-4 mb-6 text-slate-900">
+          Características
+        </h3>
+
+        <ul class="space-y-4">
+          <li class="flex items-start gap-3">
+            <div class="mt-1 bg-[#F57C00]/20 p-1 rounded-full">
+              <CheckIcon class="w-3 h-3 text-[#F57C00]" />
+            </div>
+            <p class="text-slate-600">
+              <strong class="text-slate-900"
+                >Base de datos local cifrada:</strong
+              > Tus ventas y clientes están protegidos bajo llave.
+            </p>
+          </li>
+          <li class="flex items-start gap-3">
+            <div class="mt-1 bg-[#F57C00]/20 p-1 rounded-full">
+              <CheckIcon class="w-3 h-3 text-[#F57C00]" />
+            </div>
+            <p class="text-slate-600">
+              <strong class="text-slate-900">Gestión de Inventario:</strong> Control
+              de stock.
+            </p>
+          </li>
+          <li class="flex items-start gap-3">
+            <div class="mt-1 bg-[#F57C00]/20 p-1 rounded-full">
+              <CheckIcon class="w-3 h-3 text-[#F57C00]" />
+            </div>
+            <p class="text-slate-600">
+              <strong class="text-slate-900">Multi-idioma:</strong> Cambia entre Español
+              e Inglés.
+            </p>
+          </li>
+          <li class="flex items-start gap-3">
+            <div class="mt-1 bg-[#F57C00]/20 p-1 rounded-full">
+              <CheckIcon class="w-3 h-3 text-[#F57C00]" />
+            </div>
+            <p class="text-slate-600">
+              <strong class="text-slate-900">Exportar:</strong> Exporta tablas y metricas
+              a documentos .PDF, .XLSX y .CSV
+            </p>
+          </li>
+          <li class="flex items-start gap-3">
+            <div class="mt-1 bg-[#F57C00]/20 p-1 rounded-full">
+              <CheckIcon class="w-3 h-3 text-[#F57C00]" />
+            </div>
+            <p class="text-slate-600">
+              <strong class="text-slate-900">Correos electrónicos:</strong> Recupera
+              tu contraseña.
+            </p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- TARJETA 2: REQUISITOS -->
+      <div
+        class="relative p-8 bg-[#F57C00]/5 rounded-3xl border-2 border-[#F57C00] shadow-sm"
+      >
+        <div
+          class="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-[#F57C00] rounded-full flex items-center justify-center shadow-lg"
+        >
+          <PcIcon class="w-6 h-6 text-white" />
+        </div>
+
+        <h3 class="text-2xl font-bold text-center mt-4 mb-6 text-slate-900">
+          Requisitos
+        </h3>
+
+        <ul class="space-y-4">
+          <li class="flex items-center gap-3">
+            <span class="text-slate-500 font-medium w-24">OS:</span>
+            <span class="text-slate-900">Windows 10 / 11 (64 bits)</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="text-slate-500 font-medium w-24">RAM:</span>
+            <span class="text-slate-900">Mínimo 4GB (Recomendado 8GB)</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="text-slate-500 font-medium w-24">Espacio:</span>
+            <span class="text-slate-900">500MB de almacenamiento libre</span>
+          </li>
+          <li
+            class="flex items-center gap-3 border-t border-slate-200 pt-4 mt-2"
+          >
+            <span
+              class="text-[#D32F2F] text-sm font-bold bg-[#D32F2F]/20 px-3 py-1 rounded-full uppercase"
+              >NO INTERNET</span
+            >
+            <span class="text-slate-500 text-xs italic"
+              >No requiere internet para operar</span
+            >
+          </li>
+          <li
+            class="flex items-center gap-3 border-t border-slate-200 pt-4 mt-2"
+          >
+            <span
+              class="text-[#43A047] text-sm font-bold bg-[#43A047]/20 px-3 py-1 rounded-full uppercase"
+              >INTERNET</span
+            >
+            <span class="text-slate-500 text-xs italic"
+              >Requiere internet + Contraseña de aplicación de una cuenta de
+              Google para recuperar contraseña</span
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
