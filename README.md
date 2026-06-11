@@ -5,7 +5,7 @@
 
 Web de aplicación de escritorio de punto de venta para PyMEs. Permite gestionar ventas, inventario, ingresos y pérdidas con reportes claros y en tiempo real, ayudando a mejorar la eficiencia y el control financiero del negocio.
 
-  <img width="1200" height="475" alt="Hero FidePOS Web" src="./src/assets/fideposWeb.png"/>
+  <img width="1200" height="475" alt="Hero FidePOS Web" src="./src/assets/fideposWeb.webp"/>
 </div>
 
 #
